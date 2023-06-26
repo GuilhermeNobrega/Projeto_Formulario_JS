@@ -1,0 +1,28 @@
+body{
+    background-color:rgba(207, 131, 32, 0.534)
+}
+
+h1{
+    font:200;
+    color:brown;
+    text-align:center;
+}
+h3{
+    text-align:center;
+}
+
+div{
+    background-color:white;
+    width: 300px;
+    border: 15px solid rgba(116, 93, 47, 0.534);
+    padding: 40px;
+    margin: 30px;
+}
+button{
+    background-color: blueviolet;
+    color:black;
+    
+}
+input{
+    background-color:antiquewhite;
+}
