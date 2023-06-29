@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini projeto</title>
+    <link rel="stylesheet" href="cores.css" />
+</head>
+<body>
+<div class="center">
+    <h1>Formulário:</h1>
+    <h3>Insira abaixo seu nome e data de nascimento</h3>
+        <label for="fname">Nome</label><br>
+        <input id="name_input" type="text"><br>
+        <label for="fname">Data_Nascimento</label><br>
+        <input id="date_input" type="number"><br>
+
+        <button onclick="enviarDadosInput()">Enviar</button><br>  
+
+        <table border="1">
+            <tr>
+                <h2>Dados</h2>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Salario</th>
+            </tr>
+        
+            <tr>
+                <td>Joao</td>
+                <td>18</td>
+                <td>R$ 1500</td>
+            </tr>
+            <tr>
+                <td>Patrick</td>
+                <td>55</td>
+                <td>R$ 10.500</td>
+            <tr>
+                <td>Felps</td>
+                <td>29</td>
+                <td>R$ 18.000</td>
+            </tr>
+            </tr>
+          </table>
+
+</div>
+<script>
+    let salvos = [];
+    function enviarDadosInput() {
+        
+        let nome = document.getElementById("name_input").value;
+        let nascimento = document.getElementById("date_input").value;
+
+        salvos.push({"nome": nome, "nascimento": nascimento});
+
+        console.log(salvos);
+    }
+
+    // if(salvos[0].nascimento == 16092003){
+    //      window.alert("Seu signo é: Virgem!")
+    //  }
+</script>
+</body>
