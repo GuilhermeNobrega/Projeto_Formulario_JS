@@ -6,10 +6,29 @@
     <title>Mini projeto</title>
     <link rel="stylesheet" href="cores.css"
 </head>
-<header></header>
+<header>
+ <style>
+    .quadradao{
+    text-align: center;
+    background-color:white;
+    width: 300px;
+    border: 15px solid rgba(116, 93, 47, 0.534);
+    padding: 40px;
+    margin:auto;
+    left: 30px;
+    width: 50%;
+    font-size: 18px;
+    }
+    </style>
+    <div class="quadradao"
+</div>
+
+    </div>
+</header>
 <body>    
     <style>
     .center{
+    min-height:60vh;
     text-align: center;
     background-color:white;
     width: 300px;
@@ -30,23 +49,41 @@
         <label for="fname">Data_Nascimento</label><br>
         <input type="number"><br>
         <button>Enviar</button><br>
-
+        <section>Para ler mais sobres signos, veja o link abaixo com mais informações sobre
+        <a href="https://www.personare.com.br/signos">signos</a>
+        </section>
+        <script>
+            //window.alert("Campo Nome ou data inválidos!!");
+            //window.confirm("Deseja enviar?");
+            var nome = window.prompt("Digite seu nome")
+            //window.alert("Seja bem vindo, " + nome + "!")
+            window.alert(`Seja bem vindo, ${nome}`);
+            document.write(`<h2> Seu nome possue ${nome.length} sílabas </h2>`)
+            var data_nasc = Number(window.prompt("Digite sua data de aniversario"))
+            if(data_nasc == 16092003){
+                window.alert("Se seu aniversario for setembro, vc do signo virgem")
+            }
+            //var n1 = Number.parseInt(window.prompt("v1")) //string;Number
+            //var n2 = Number(window.prompt("v2")) //string
+            // var teste = String(window.prompt("string"))
+            //n.toString()
+            //String(s)
+            var total = n1 + n2 // strings, concatenam. Vamos converter.
+            //window.alert("Soma: " + total)
+            //window.alert(`Soma: ${total}`)
+            </script>
 </div>
 </body>
 <footer>
-    <script>
-        //window.alert("Campo Nome ou data inválidos!!");
-        //window.confirm("Deseja enviar?");
-        //var nome = window.prompt("Digite seu nome")
-        //window.alert("Seja bem vindo, " + nome + "!")
-        //var n1 = Number.parseInt(window.prompt("v1")) //string;Number
-        //var n2 = Number(window.prompt("v2")) //string
-        // var teste = String(window.prompt("string"))
-        //n.toString()
-        //String(s)
-        var total = n1 + n2 // strings, concatenam. Vamos converter.
-        //window.alert("Soma: " + total)
-        //window.alert(`Soma: ${total}`)
-
-        </script>
-    </footer>
+    <style>
+        .final{
+            margin-top:auto;
+            text-align:center;
+            text-decoration: blue;
+            text-decoration-color:black;
+        }
+    </style>
+    <div class="final">
+        <h5>Developed by Guilherme </h5>
+    </div>
+</footer>
