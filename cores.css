@@ -1,25 +1,62 @@
-body{
-    background-color:rgba(207, 131, 32, 0.534)
+body {
+  background-color: rgba(207, 131, 32, 0.534);
 }
 
-h3{
-    text-align:center;
+h3 {
+  text-align: center;
 }
-button{
-    background-color: blueviolet;
-    color:black;
-    
+button {
+  background-color: blueviolet;
+  color: black;
 }
-input{
-    background-color:antiquewhite;
+input {
+  background-color: antiquewhite;
 }
-footer{
-    background-color:white;
-    width: 300px;
-    border: 15px solid rgba(116, 93, 47, 0.534);
-    padding: 40px;
-    margin:auto;
-    left: 30px;
-    width: 50%;
-    font-size: 18px;
+footer {
+  width: 300px;
+
+  padding: 40px;
+  margin: auto;
+  left: 30px;
+  width: 94%;
+  font-size: 18px;
+}
+
+.quadradao {
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  border: 15px solid rgba(116, 93, 47, 0.534);
+  padding: 40px;
+  margin: auto;
+  left: 30px;
+  width: 50%;
+  font-size: 18px;
+}
+
+.center {
+  min-height: 60vh;
+  text-align: center;
+  background-color: white;
+  width: 300px;
+  border: 15px solid rgba(116, 93, 47, 0.534);
+  padding: 40px;
+  margin: auto;
+  left: 30px;
+  width: 50%;
+  font-size: 18px;
+}
+
+.final {
+  margin-top: auto;
+  text-align: center;
+  text-decoration: blue;
+  text-decoration-color: black;
+}
+table{
+    margin: 23%;
+    width: 54%;
+    height: 35px;;
+    text-align: center;
+    color:blue;
 }
