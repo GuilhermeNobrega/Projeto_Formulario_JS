@@ -6,11 +6,15 @@ h3 {
   text-align: center;
 }
 button {
+  margin: 8px;
   background-color: blueviolet;
   color: black;
 }
 input {
+  text-align: center;
   background-color: antiquewhite;
+  margin: 7px;
+  width:140px;
 }
 footer {
   width: 300px;
@@ -42,8 +46,8 @@ footer {
   border: 15px solid rgba(116, 93, 47, 0.534);
   padding: 40px;
   margin: auto;
-  left: 30px;
-  width: 50%;
+  left: 300px;
+  width: 40%;
   font-size: 18px;
 }
 
@@ -53,10 +57,17 @@ footer {
   text-decoration: blue;
   text-decoration-color: black;
 }
+
+
 table{
+    position:bottom;
+    top: 20px;
     margin: 23%;
     width: 54%;
     height: 35px;;
     text-align: center;
     color:blue;
+}
+h4{
+  width:auto;
 }
