@@ -12,38 +12,51 @@
     <h3>Insira abaixo seu nome e data de nascimento</h3>
         <label for="fname">Nome</label><br>
         <input id="name_input" type="text"><br>
-        <label for="fname">Data_Nascimento</label><br>
-        <input id="date_input" type="number"><br>
+        <label for="fname">Data Nascimento</label><br>
+        <input id="date_input" type="date"><br>
 
-        <button onclick="enviarDadosInput()">Enviar</button><br>  
-
-        <table border="1">
+        <button onclick="enviarDadosInput(),dadosAceitos(),dadosIncorretos()">Enviar</button><br>
+        <table id="tabela" border="2">
             <tr>
-                <h2>Dados</h2>
+                <h4>Dados</h4>
                 <th>Nome</th>
-                <th>Idade</th>
-                <th>Salario</th>
+                <th>Data_nascimento</th>
             </tr>
         
             <tr>
-                <td>Joao</td>
-                <td>18</td>
-                <td>R$ 1500</td>
+                <td>x</td>
+                <td>x</td>
             </tr>
             <tr>
-                <td>Patrick</td>
-                <td>55</td>
-                <td>R$ 10.500</td>
-            <tr>
-                <td>Felps</td>
-                <td>29</td>
-                <td>R$ 18.000</td>
+                <td>x</td>
+                <td>x</td>
             </tr>
             </tr>
           </table>
-
+          
 </div>
 <script>
+       function dadosAceitos(){
+        var nome = document.getElementById("name_input").value;
+        var nascimento = document.getElementById("date_input").value;
+        if (nome == false || nascimento == false){
+            window.alert("Campo(s) Nome ou Data_Nascimento vazios. Preencha os campos!");
+            var removidos = salvos.pop()
+        }
+    }
+    
+    function dadosIncorretos(){
+        var texto = document.getElementById("name_input").value;
+        var numero = document.getElementById("date_input").value;
+        teste = Number(texto)
+        //console.log(typeof(teste))
+        if(texto == teste ){
+            window.alert("Caixa de texto não aceita números!.");
+            //console.log(typeof(texto))
+            var removidos = salvos.pop()
+        }
+    }
+
     let salvos = [];
     function enviarDadosInput() {
         
