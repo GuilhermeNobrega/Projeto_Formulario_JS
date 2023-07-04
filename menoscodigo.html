@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini projeto</title>
+    <link rel="stylesheet" href="cores.css" />
+  </head>
+  <body>
+    <div class="center">
+      <h1>Formulário:</h1>
+      <h3>Insira abaixo seu nome e data de nascimento</h3>
+      <label for="fname">Nome</label><br />
+      <input id="name_input" type="text" /><br />
+      <label for="fname">Data Nascimento</label><br />
+      <input id="date_input" type="date" /><br />
+
+      <button onclick="enviar()">Enviar</button><br />
+      <table id="tabela" border="2">
+        <tr>
+          <h4>Dados</h4>
+          <th>Nome</th>
+          <th>Data_nascimento</th>
+        </tr>
+
+        <tr id="emptyRow">
+          <td colspan="2" id="Nome">Não há dados</td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      var data = [];
+      function enviar() {
+        let nameInputValue = document.getElementById("name_input").value;
+        let birthdayInputValue = document.getElementById("date_input").value;
+
+        if (Number(nameInputValue) || !nameInputValue || !birthdayInputValue) {
+          window.alert("Caixa de texto não aceita números!.");
+        } else {
+          if (data.length == 0) {
+            document.getElementById("tabela").deleteRow(-1);
+          }
+
+          data.push({ "name": nameInputValue, "birthday": birthdayInputValue });
+
+          let table = document.getElementById("tabela");
+          let newRow = table.insertRow(-1);
+          let newNameCell = newRow.insertCell(0);
+          let newBirthdayCell = newRow.insertCell(1);
+
+          newNameCell.innerHTML = nameInputValue;
+          newBirthdayCell.innerHTML = birthdayInputValue;
+        }
+      }
+    </script>
+  </body>
+</html>
