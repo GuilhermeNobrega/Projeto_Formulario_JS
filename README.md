@@ -17,7 +17,7 @@ Leitura de Dados: O usuário insere seu nome e data de nascimento por meio de ca
 Cálculo do Signo: Com base na data de nascimento fornecida, o projeto realiza o cálculo do signo correspondente.
 Exibição dos Dados: Os dados coletados, juntamente com informações sobre o signo do usuário, são apresentados de forma clara e organizada em uma tabela.</h4>
 Resultado Final:
-Ao interagir com o projeto, o usuário terá acesso imediato às informações sobre seu signo, de forma precisa e visualmente agradável. A tabela exibirá o nome do usuário, sua data de nascimento e o signo correspondente.
+Ao interagir com o projeto, o usuário terá acesso imediato às informações sobre seu signo, de forma precisa e visualmente agradável. A tabela exibirá o nome do usuário, sua data de nascimento e o signo correspondente.</strong>
 
 <h1>  Conclusão: </h1>
 O projeto de leitura de dados do usuário, combinando HTML, CSS e JavaScript, demonstra o uso prático das técnicas de programação no desenvolvimento front-end. Além de oferecer uma experiência agradável ao usuário, ele permite aprimorar habilidades de programação e a compreensão da interação entre as diferentes tecnologias envolvidas.
