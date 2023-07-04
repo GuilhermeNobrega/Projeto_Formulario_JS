@@ -7,7 +7,7 @@ O objetivo deste projeto é proporcionar uma experiência interativa ao usuário
 <h1> Tecnologias Utilizadas: </h1>
 <h4></h4>O projeto faz uso das seguintes tecnologias:
 
-HTML: Responsável pela estrutura e marcação do conteúdo.
+<strong> HTML: Responsável pela estrutura e marcação do conteúdo.
 CSS: Utilizado para estilizar a página, tornando-a visualmente atraente e agradável.
 JavaScript: Responsável pela lógica do projeto, coletando os dados do usuário e exibindo as informações relevantes sobre o signo.
 Funcionalidades
