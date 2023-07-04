@@ -1,7 +1,7 @@
-Projeto Signo - Leitura de Dados do Usuário
+<h1> Projeto Signo - Leitura de Dados do Usuário: </h1>
 Este projeto utiliza HTML, CSS e JavaScript para realizar a leitura dos dados do usuário, incluindo nome e data de nascimento. Com base nessas informações, o projeto apresenta dados relevantes sobre o signo do usuário.
 
-Objetivo
+<h1> Objetivo:  </h1>
 O objetivo deste projeto é proporcionar uma experiência interativa ao usuário, permitindo que ele insira seus dados pessoais e obtenha informações precisas sobre seu signo. A interface é projetada de forma agradável e intuitiva, com uma tabela bem estruturada para exibir os dados coletados.
 
 Tecnologias Utilizadas
@@ -19,5 +19,5 @@ Exibição dos Dados: Os dados coletados, juntamente com informações sobre o s
 Resultado Final
 Ao interagir com o projeto, o usuário terá acesso imediato às informações sobre seu signo, de forma precisa e visualmente agradável. A tabela exibirá o nome do usuário, sua data de nascimento e o signo correspondente.
 
-Conclusão
+Conclusão:
 O projeto de leitura de dados do usuário, combinando HTML, CSS e JavaScript, demonstra o uso prático das técnicas de programação no desenvolvimento front-end. Além de oferecer uma experiência agradável ao usuário, ele permite aprimorar habilidades de programação e a compreensão da interação entre as diferentes tecnologias envolvidas.
