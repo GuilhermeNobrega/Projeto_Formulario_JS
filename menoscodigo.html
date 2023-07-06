@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="cores.css" />
   </head>
   <body>
+    <img src="https://media.tenor.com/sboZxklZ2pcAAAAC/8bit-space.gif" alt=" artist rendition of a black hole in space">
+
     <div class="center">
       <h1>Formulário:</h1>
       <h3>Insira abaixo seu nome e data de nascimento</h3>
@@ -21,35 +23,46 @@
           <h4>Dados</h4>
           <th>Nome</th>
           <th>Data_nascimento</th>
+          <th>Signo</th>
         </tr>
 
         <tr id="emptyRow">
-          <td colspan="2" id="Nome">Não há dados</td>
+          <td colspan="4" id="Nome">Não há dados</td>
         </tr>
       </table>
     </div>
     <script>
       var data = [];
+      let signo;
       function enviar() {
         let nameInputValue = document.getElementById("name_input").value;
         let birthdayInputValue = document.getElementById("date_input").value;
-
         if (Number(nameInputValue) || !nameInputValue || !birthdayInputValue) {
           window.alert("Caixa de texto não aceita números!.");
         } else {
           if (data.length == 0) {
             document.getElementById("tabela").deleteRow(-1);
           }
-
-          data.push({ "name": nameInputValue, "birthday": birthdayInputValue });
-
+          if(birthdayInputValue =="2003-09-16"){
+            window.alert("deu");
+            signo = "virgem";
+          }
+          if(birthdayInputValue =="2003-10-07"){
+            window.alert("deu1");
+            signo = "slk sei n";
+          }
           let table = document.getElementById("tabela");
           let newRow = table.insertRow(-1);
           let newNameCell = newRow.insertCell(0);
+          let signo1 = newRow.insertCell(1)
           let newBirthdayCell = newRow.insertCell(1);
 
           newNameCell.innerHTML = nameInputValue;
           newBirthdayCell.innerHTML = birthdayInputValue;
+          signo1.innerHTML = signo;
+
+          data.push({ "name": nameInputValue, "birthday": birthdayInputValue, "signo": signo });
+          console.log(data)
         }
       }
     </script>
