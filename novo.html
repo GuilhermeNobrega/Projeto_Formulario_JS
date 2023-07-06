@@ -15,21 +15,13 @@
         <label for="fname">Data Nascimento</label><br>
         <input id="date_input" type="date"><br>
 
-        <button onclick="enviarDadosInput(),dadosAceitos(),dadosIncorretos(),enviar()">Enviar</button><br>
+        <button onclick="enviarDadosInput(),dadosAceitos(),dadosIncorretos(),enviar(),signo()">Enviar</button><br>
         <table id="tabela" border="2">
-            <tr>
+            <tr id="testt">
                 <h4>Dados</h4>
                 <th>Nome</th>
                 <th>Data_nascimento</th>
             </tr>
-        
-            <tr>
-                <td id="Nome">x</td>
-                <td id="Data">x</td>
-            </tr>
-            <tr>
-                <td id = "Nome1">x</td>
-                <td id = "Data1">x</td>
             </tr>
           </table>
           
@@ -73,18 +65,25 @@
         //document.getElementById("Data").innerHTML = salvos[0].nascimento;
         //document.getElementById("Nome1").innerHTML = salvos[1].nome;
         //document.getElementById("Data1").innerHTML = salvos[1].nascimento;
+        var signo;
         let nome = document.getElementById("name_input").value;
         let nascimento = document.getElementById("date_input").value;
-        salvos.push({"nome": nome, "nascimento": nascimento});
         var tabela = document.getElementById("tabela");
         var linha = tabela.insertRow(-1);
+        var cell1 = linha.insertCell(0);
         var cell1 = linha.insertCell(0);
         var cell2 = linha.insertCell(1);
         cell1.innerHTML = nome;
         cell2.innerHTML = nascimento;
     }
-    // if(salvos[0].nascimento == 16092003){
-    //      window.alert("Seu signo é: Virgem!")
-    //  }
+    function signo(){
+        var signo = document.createElement("th");
+        var texto = document.createTextNode("Signo");
+        signo.appendChild(texto);
+        document.getElementById("testt").appendChild(signo);
+        if(salvos[0].nascimento == '2003-09-16'){
+            console.log("signo -> virgem");
+        }
+    }
 </script>
 </body>
