@@ -17,7 +17,7 @@
       <label for="fname">Data Nascimento</label><br />
       <input id="date_input" type="date" /><br />
 
-      <button onclick="enviar()">Enviar</button><br />
+      <button onclick="enviar(),separar()">Enviar</button><br />
       <table id="tabela" border="2">
         <tr>
           <h4>Dados</h4>
@@ -32,6 +32,40 @@
       </table>
     </div>
     <script>
+     let signos = [{min: "21/01", max:"18/02"},  
+     {min:"19/02",max:"20/03"},
+     {min:"21/03",max: "20/04"},
+     {min:"21/04", max: "20/05"},
+     {min:"21/05",max:"20/06"},
+     {min:"21/06",max:"22/07"},
+     {min:"23/07",max:"22/08"},
+     {min:"23/08",max:"22/09"},
+     {min:"23/09",max:"22/10"},
+     {min:"23/10",max:"21/11"},
+     {min:"22/11",max:"21/12"},    
+    ]
+      
+      function separar(){
+        let tamanho = signos.length;
+        console.log(tamanho);
+        for(var c=0;c<tamanho;c++){
+          let mesEntrada = 11;
+          let diaEntrada = 10;
+          let min = signos[c].min.split("/");
+          let minDia = min[0];  
+          let minMes = min[1];
+          let max = signos[c].max.split('/'); 
+          let maxDia = max[0];
+          let maxMes = max[1];
+          
+          if(minMes <= mesEntrada && mesEntrada <= maxMes){
+            if(minDia<=diaEntrada && maxDia>=diaEntrada){
+
+            }
+
+          }
+        }
+      }
       var data = [];
       let signo;
       function enviar() {
@@ -43,12 +77,10 @@
           if (data.length == 0) {
             document.getElementById("tabela").deleteRow(-1);
           }
-          if(birthdayInputValue =="2003-09-16"){
-            window.alert("deu");
+          if(birthdayInputValue == 4 ){
             signo = "virgem";
           }
           if(birthdayInputValue =="2003-10-07"){
-            window.alert("deu1");
             signo = "slk sei n";
           }
           let table = document.getElementById("tabela");
