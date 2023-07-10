@@ -61,14 +61,15 @@ footer {
 
 
 table{
+    margin-left:15%; 
+    margin-right:15%;
+    background-color:white;
     position:bottom;
     top: 20px;
-    margin: 23%;
     width: 54%;
-    height: 35px;;
+    height: 35px;
     text-align: center;
-    color:blue;
-    
+    color:blue;    
 }
 h4{
   width:auto;
