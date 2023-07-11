@@ -6,16 +6,25 @@ body {
 h3 {
   text-align: center;
 }
-button {
-  margin: 8px;
-  background-color: blueviolet;
-  color: black;
-}
+
 input {
   text-align: center;
   background-color: antiquewhite;
   margin: 7px;
   width:140px;
+}
+select{
+  border-color: black;
+  text-align: center;
+  background-color: antiquewhite;
+  margin: 7px;
+  width:130px;
+}
+button:hover {
+  height: 20px;
+  background-color:purple;
+  color:aqua;
+  
 }
 footer {
   width: 300px;
@@ -43,11 +52,9 @@ footer {
   min-height: 60vh;
   text-align: center;
   background-color: white;
-  width: 300px;
   border: 15px solid rgba(116, 93, 47, 0.534);
-  padding: 40px;
+  padding: 20px;
   margin: auto;
-  left: 300px;
   width: 40%;
   font-size: 18px;
 }
@@ -61,13 +68,13 @@ footer {
 
 
 table{
-    margin-left:15%; 
+    margin-left:25%; 
     margin-right:15%;
     background-color:white;
     position:bottom;
     top: 20px;
-    width: 54%;
-    height: 35px;
+    width: 50%;
+    height: 60px;
     text-align: center;
     color:blue;    
 }
