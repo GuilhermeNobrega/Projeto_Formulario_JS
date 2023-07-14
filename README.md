@@ -5,6 +5,7 @@ https://whatismysign.net/
 O objetivo deste projeto é proporcionar uma experiência interativa ao usuário, permitindo que ele insira seus dados pessoais e obtenha informações precisas sobre seu signo. A interface é projetada de forma agradável e intuitiva, com uma tabela bem estruturada para exibir os dados coletados. Para acessar o site via github, acesse https://guilhermenobrega.github.io/Projeto_Formulario_JS/menoscodigo.html ou: <img src=""/Imagens/gui.jpg" alt="git">
 
 
+![gui jpg](https://github.com/GuilhermeNobrega/Projeto_Formulario_JS/assets/100214869/3be9b825-a4ad-410e-9b37-42fa697e24ff)
 
 <h1> Tecnologias Utilizadas: </h1>
 <h4></h4>O projeto faz uso das seguintes tecnologias:
