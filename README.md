@@ -2,7 +2,7 @@
 Este projeto utiliza HTML, CSS e JavaScript para realizar a leitura dos dados do usuário, incluindo nome e data de nascimento. Com base nessas informações, o projeto apresenta dados relevantes sobre o signo do usuário.
 https://whatismysign.net/
 <h1> Objetivo:  </h1>
-O objetivo deste projeto é proporcionar uma experiência interativa ao usuário, permitindo que ele insira seus dados pessoais e obtenha informações precisas sobre seu signo. A interface é projetada de forma agradável e intuitiva, com uma tabela bem estruturada para exibir os dados coletados. Para acessar o site via github, acesse https://guilhermenobrega.github.io/Projeto_Formulario_JS/menoscodigo.html ou: <img src="gui.jpg" alt="git">
+O objetivo deste projeto é proporcionar uma experiência interativa ao usuário, permitindo que ele insira seus dados pessoais e obtenha informações precisas sobre seu signo. A interface é projetada de forma agradável e intuitiva, com uma tabela bem estruturada para exibir os dados coletados. Para acessar o site via github, acesse https://guilhermenobrega.github.io/Projeto_Formulario_JS/menoscodigo.html ou: <img src=""/Imagens/gui.jpg" alt="git">
 
 
 
