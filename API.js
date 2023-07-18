@@ -11,9 +11,30 @@ A URL base da API da Marvel é: https://gateway.marvel.com/v1/public/ */
 var chavepublica = "2c4b9fc14553fb325ec2aecf3ecb032f"
 var hashmd5 = "2c97e9633fe2b75b94b7517faa907463"
 var ts = "1"
-fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}`
+fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=8`
 ).then((Response) => {
     return Response.json();
 }).then((jsonParsed) =>{
     console.log(jsonParsed);
+    var divRecebedorHerois = document.querySelector('#quadradinhos');
+    jsonParsed.data.results.forEach(element => {
+        var caminhoImagem = element.thumbnail.path + '.' + element.thumbnail.extension;
+        var nomeHeroi = element.name;
+        createDivHero(caminhoImagem, nomeHeroi, divRecebedorHerois);
+    });
 })
+function createDivHero(caminhoImagem,nomeHeroi,divtoAppend){
+    var divPai = document.createElement('div');
+    var divFilho = document.createElement('div');
+    var textName = document.createElement('text');
+    var img = document.createElement('img');
+
+    textName.textContent = nomeHeroi;
+    img.src = caminhoImagem;
+    divFilho.appendChild(img);
+    divFilho.appendChild(textName);
+    divPai.appendChild(divFilho);
+    divtoAppend.appendChild(divPai);
+    
+    divPai.classList.add("personagem");
+}
