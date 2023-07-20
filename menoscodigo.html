@@ -12,7 +12,7 @@
       alt=" artist rendition of a black hole in space"
     />
 
-    <div class="center">
+    <div class="center" id="quadradinhos">
       <h1>Formulário:</h1>
       <h3>Insira abaixo seu nome e data de nascimento</h3>
       <label for="fname">Nome</label><br />
@@ -239,6 +239,23 @@
       //console.log(meses);
       var data = [];
       function separar() {
+        var chavepublica = "2c4b9fc14553fb325ec2aecf3ecb032f"
+        var hashmd5 = "2c97e9633fe2b75b94b7517faa907463"
+        var ts = "1"
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=8`
+        ).then((Response) => {
+            return Response.json();
+    
+        }).then((jsonParsed) =>{   
+            console.log(jsonParsed);
+            var divRecebedorHerois = document.querySelector('#quadradinhos');
+            jsonParsed.data.results.forEach(element => {
+            var caminhoImagem = element.thumbnail.path + '.' + element.thumbnail.extension;
+            var nomeHeroi = element.name;
+            createDivHero(caminhoImagem, nomeHeroi, divRecebedorHerois);
+      });
+    })
+        
         let nameInputValue = document.getElementById("name_input").value;
         let year = document.getElementById("year").value;
         let birthdayInputValue = document.getElementById("month").value;
