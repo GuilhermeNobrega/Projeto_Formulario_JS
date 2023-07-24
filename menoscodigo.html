@@ -241,8 +241,9 @@
       function separar() {
         var chavepublica = "2c4b9fc14553fb325ec2aecf3ecb032f"
         var hashmd5 = "2c97e9633fe2b75b94b7517faa907463"
+        var offset = Math.random()
         var ts = "1"
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=random`
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${offset}`
         ).then((Response) => {
             return Response.json();
     
