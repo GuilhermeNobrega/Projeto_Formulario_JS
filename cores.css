@@ -66,6 +66,14 @@ footer {
   text-decoration-color: black;
 }
 
+img{
+  width: 150px;
+}
+
+
+div{
+  margin: 30px;
+}
 
 table{
     margin-left:25%; 
@@ -76,7 +84,8 @@ table{
     width: 50%;
     height: 60px;
     text-align: center;
-    color:blue;    
+    color:blue;
+
 }
 h4{
   width:auto;
