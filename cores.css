@@ -28,7 +28,6 @@ button:hover {
 }
 footer {
   width: 300px;
-
   padding: 40px;
   margin: auto;
   left: 30px;
@@ -68,11 +67,15 @@ footer {
 
 img{
   width: 150px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border-style:double;
+  border-radius: 5px;
 }
 
-
-div{
-  margin: 30px;
+text{
+  text-align: center;
+  color: purple;
 }
 
 table{
