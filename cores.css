@@ -65,16 +65,21 @@ footer {
   text-decoration-color: black;
 }
 
+
+div{
+  text-align:center;
+}
+
 img{
   width: 150px;
   margin-top: 20px;
   margin-left: 10px;
   border-style:double;
   border-radius: 5px;
+  display:block;
 }
 
 text{
-  text-align: center;
   color: purple;
 }
 
