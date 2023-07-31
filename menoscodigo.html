@@ -238,12 +238,22 @@
       ];
       //console.log(meses);
       var data = [];
-      var imagens = []
+      var imagens = [];
+      var salvarIds = [];
+      var valoresAleatorios = [];
       function separar() {
         var chavepublica = "2c4b9fc14553fb325ec2aecf3ecb032f"
         var hashmd5 = "2c97e9633fe2b75b94b7517faa907463"
+        var set = new Set();
         var offset = Math.floor(Math.random() * 30);
+        set.add(offset)
+
+        //set.add(offset);
+        //salvarIds.push(offset);
+        //console.log(salvarIds);
         //console.log(offset);
+        let myset = new Set(salvarIds)
+        console.log(myset)
         var ts = "1"
         fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${offset}`
         ).then((Response) => {
@@ -254,6 +264,8 @@
             var divRecebedorHerois = document.querySelector('#quadradinhos'); // ou document.getElementById('quadradinhos');
             jsonParsed.data.results.forEach(element => {
             var limite = jsonParsed.data.limit;
+            var checar_Lista_Id = jsonParsed.data
+            //console.log(checar_Lista_Id);
             //if(limite ==1){
               //window.alert("oie");
             //}
