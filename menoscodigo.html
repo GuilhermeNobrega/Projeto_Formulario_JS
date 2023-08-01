@@ -244,18 +244,21 @@
       function separar() {
         var chavepublica = "2c4b9fc14553fb325ec2aecf3ecb032f"
         var hashmd5 = "2c97e9633fe2b75b94b7517faa907463"
-        var set = new Set();
+        //var set = new Set();
         var offset = Math.floor(Math.random() * 30);
-        set.add(offset)
-
-        //set.add(offset);
-        //salvarIds.push(offset);
-        //console.log(salvarIds);
-        //console.log(offset);
-        let myset = new Set(salvarIds)
-        console.log(myset)
+        valoresAleatorios.push(offset)
+        let tamanho = valoresAleatorios.length;
+        //console.log(tamanho)
+        for(let i=0;i<tamanho;i++){
+            if(salvarIds.indexOf(valoresAleatorios[i])===-1){
+                salvarIds.push(valoresAleatorios[i])
+            }
+        }
+        console.log(salvarIds)
+        aleatorio = salvarIds.sort()
+        //set.add(salvarIds)
         var ts = "1"
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${offset}`
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${aleatorio}`
         ).then((Response) => {
             return Response.json();
     
