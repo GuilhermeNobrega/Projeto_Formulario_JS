@@ -258,7 +258,7 @@
         aleatorio = salvarIds.sort()
         //set.add(salvarIds)
         var ts = "1"
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${aleatorio}`
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${offset}`
         ).then((Response) => {
             return Response.json();
     
