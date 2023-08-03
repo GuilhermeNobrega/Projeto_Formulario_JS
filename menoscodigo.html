@@ -241,11 +241,13 @@
       var imagens = [];
       var salvarIds = [];
       var valoresAleatorios = [];
+      var nomes = [];
+      var offset = Math.floor(Math.random() * 100);
       function separar() {
         var chavepublica = "2c4b9fc14553fb325ec2aecf3ecb032f"
         var hashmd5 = "2c97e9633fe2b75b94b7517faa907463"
         //var set = new Set();
-        var offset = Math.floor(Math.random() * 30);
+        var offset = Math.floor(Math.random() * 100);
         valoresAleatorios.push(offset)
         let tamanho = valoresAleatorios.length;
         //console.log(tamanho)
@@ -255,10 +257,9 @@
             }
         }
         console.log(salvarIds)
-        aleatorio = salvarIds.sort()
         //set.add(salvarIds)
         var ts = "1"
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${offset}`
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${salvarIds}`
         ).then((Response) => {
             return Response.json();
     
@@ -280,29 +281,37 @@
       });
     })
     function createDivHero(caminhoImagem,nomeHeroi,divtoAppend){
-    var textName = document.createElement('text');
-    //var divPai = document.createElement('div');
-    //var divFilho = document.createElement('div');
-    var img = document.createElement('img');
-    
+        var textName = document.createElement('text');
+        //var divPai = document.createElement('div');
+        //var divFilho = document.createElement('div');
+        var img = document.createElement('img');
+        
 
-    textName.textContent = nomeHeroi;
-    img.src = caminhoImagem;
-    //divFilho.appendChild(img);
-    //divFilho.appendChild(textName);
-    //divPai.classList.add("personagem");
+        textName.textContent = nomeHeroi;
+        img.src = caminhoImagem;
+        //divFilho.appendChild(img);
+        //divFilho.appendChild(textName);
+        //divPai.classList.add("personagem");    
+              
   
 
         let receber_foto = document.createElement('img');
         receber_foto.src = caminhoImagem
         console.log(receber_foto)
+        
         let nameInputValue = document.getElementById("name_input").value;
+        nomes.push(nameInputValue)
+
+        nomes.push(nameInputValue);
+        console.log(nomes);
         let year = document.getElementById("year").value;
         let birthdayInputValue = document.getElementById("month").value;
         let day = document.getElementById("day").value;
         let tamanho = signos.length;
         let result;
         let signo;
+
+
         /*for(var c=0;c<tamanho;c++){
           let mesEntrada = 9;
           let diaEntrada = 16;
