@@ -259,7 +259,7 @@
         console.log(salvarIds)
         //set.add(salvarIds)
         var ts = "1"
-        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${salvarIds}`
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${chavepublica}&hash=${hashmd5}&limit=1&offset=${offset}`
         ).then((Response) => {
             return Response.json();
     
@@ -300,10 +300,25 @@
         console.log(receber_foto)
         
         let nameInputValue = document.getElementById("name_input").value;
-        nomes.push(nameInputValue)
-
-        nomes.push(nameInputValue);
+        nomes.push({nome:nameInputValue});
         console.log(nomes);
+        parar = false;
+        for(var c=0;c<nomes.length;c++){
+          console.log(c);
+          for(var d=c+1;d<nomes.length;d++){
+            console.log(d);
+            if (nomes[c].nome==nomes[d].nome){
+              window.alert("Nomes duplicados não são permitidos!!!")
+              console.log("Nomes duplicados não serão permitidos! " + nomes[c].nome);
+              parar=true;
+              break;
+            }
+          }
+        }
+        if(!parar){
+
+        
+        
         let year = document.getElementById("year").value;
         let birthdayInputValue = document.getElementById("month").value;
         let day = document.getElementById("day").value;
@@ -452,7 +467,7 @@
           });
           console.log(data);
         }
-      }}
+      }}}
     </script>
   </body>
 </html>
