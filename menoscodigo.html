@@ -307,8 +307,9 @@
           console.log(c);
           for(var d=c+1;d<nomes.length;d++){
             console.log(d);
-            if (nomes[c].nome==nomes[d].nome){
-              window.alert("Nomes duplicados não são permitidos!!!")
+            if(nomes[c].nome==nomes[d].nome){
+              window.alert("Nomes duplicados não são permitidos!!");
+              nomes.pop([0]);
               console.log("Nomes duplicados não serão permitidos! " + nomes[c].nome);
               parar=true;
               break;
