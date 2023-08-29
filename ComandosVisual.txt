@@ -1,0 +1,3 @@
+shift + alt + setas = duplicar linhas
+Ctrl + shift + f = pesquisar onde aparece funções, etc
+shift + seta(lados) = seleciona as linhas
